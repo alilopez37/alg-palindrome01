@@ -12,12 +12,15 @@ int main() {
         indice++;
     }
 
+    //Copiar el contenido del arreglo palabra de manera invertida al arreglo palabraInvertida
     int indiceInvertido = indice - 1;
     for (int i=0;i<indice;i++){
         palabraInvertida[indiceInvertido] = palabra[i];
         indiceInvertido--;
     }
     palabraInvertida[indice] = '\0';
+
+    //Verificar si el contenido del arreglo palabra es palindrome
     bool flag = true;
     for (int i=0;i<indice && flag==true;i++){
         if (palabra[i] != palabraInvertida[i])
